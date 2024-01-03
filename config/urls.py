@@ -25,7 +25,7 @@ schema_view = get_schema_view(
    openapi.Info(
       title="Snippets API",
       default_version='v1',
-      description="Atomic habits",
+      description="Price maker",
       terms_of_service="https://www.google.com/policies/terms/",
       contact=openapi.Contact(email="seawolfy60@gmail.com"),
       license=openapi.License(name="BSD License"),
@@ -40,4 +40,5 @@ urlpatterns = [
     re_path(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('admin/', admin.site.urls),
     path('users/', include('users.urls', namespace='users')),
+    path('', include('price.urls', namespace='prices')),
 ]

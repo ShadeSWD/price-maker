@@ -1,9 +1,11 @@
 from django.db import models
+from config import settings
 
 NULLABLE = {"null": True, "blank": True}
 
 
 class Price(models.Model):
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='owner', **NULLABLE)
     created_at = models.DateTimeField(verbose_name='creation date', auto_now_add=True)
     changed_at = models.DateTimeField(verbose_name='change date', auto_now=True)
     origin_price = models.DecimalField(verbose_name='origin price', max_digits=20, decimal_places=6)
