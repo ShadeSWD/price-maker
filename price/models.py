@@ -22,6 +22,14 @@ class Price(models.Model):
 
     @property
     def full_price(self) -> float:
-        full_price = float(self.origin_price) * (1 + float(self.tax)) * ((1 + float(self.bank_commission)) ** 2) * \
-                     (1 + float(self.shop_commission))
+        origin_price = float(self.origin_price)
+        tax = float(self.tax)
+        bank_commission = float(self.bank_commission)
+        shop_commission = float(self.shop_commission)
+
+        tax_value = origin_price * tax
+        shop_profit = origin_price * shop_commission
+        shop_bank_commission = origin_price * bank_commission
+        customer_bank_commission = (origin_price + tax_value + shop_bank_commission + shop_profit) * bank_commission
+        full_price = origin_price + tax_value + shop_bank_commission + customer_bank_commission + shop_profit
         return full_price
