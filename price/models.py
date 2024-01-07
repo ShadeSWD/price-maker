@@ -32,4 +32,5 @@ class Price(models.Model):
         shop_bank_commission = origin_price * bank_commission
         customer_bank_commission = (origin_price + tax_value + shop_bank_commission + shop_profit) * bank_commission
         full_price = origin_price + tax_value + shop_bank_commission + customer_bank_commission + shop_profit
+
         return full_price
