@@ -43,8 +43,7 @@ Follow these steps:
 7. **Create superuser:**
     ```bash
        python manage.py createsuperuser
-8. **Create vendor:** Now, when you created a superuser,
-you can log in and create vendors at <your_host>/users/prices/
+8. **Create vendor:** Now, when you created a superuser, you can log in and create vendors at <your_host>/users/
 
 ## Docs:
     
