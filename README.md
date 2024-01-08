@@ -7,11 +7,9 @@
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 
-This APP is designed to help you obtain good habits.
-
 ## Description
 
-Atomic Habits is a web application designed for calculating resulting price of an item.
+Price Maker is a web application designed for calculating resulting price of an item.
 
 ## Installation
 
